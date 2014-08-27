@@ -9,7 +9,7 @@ function [avg] = GetTileAverages(tiles)
 
 %Initiate the loop that will loop through the "tiles" cell array and
 %produce a corresponding output with average red, green and blue values in
-%the "avg" array.
+%the each row of the "avg" array.
 for i=1:length(tiles)
         currentTile = tiles{i};
         [avg(i,1), avg(i,2), avg(i,3)] = GetAverageRGB(currentTile);
