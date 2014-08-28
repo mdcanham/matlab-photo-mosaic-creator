@@ -15,7 +15,7 @@ function [tilesDown, cellHeight, cellWidth] = GetGridDimensions...
 %Calculate the cellWidth and round it down.
 cellWidth = floor(imgWidth/tilesAcross);
 
-%Calculate the cellHieght and round it down.
+%Calculate the cellHeight and round it down.
 cellHeight = floor(cellWidth*(tileHeight/tileWidth));
 
 %Calculate the number of tiles that will be going downwards.
