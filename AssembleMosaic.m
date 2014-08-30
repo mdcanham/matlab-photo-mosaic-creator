@@ -8,14 +8,19 @@ function [mosaic] = AssembleMosaic(index,images)
 %   Output:
 %       mosaic = The final assembled mosaic as a 3 dimensional RGB image.
 
+%Find the number of rows and the number of columns corresponding to the
+%number of tiles in our image.
 [rows, cols] = size(index)
 
+%Piece together the mosaic by arranging the flower tiles in the correct
+%positions in a cell array.
 for i=1:rows
     for j=1:cols
         mosaic{i,j} = images{index(i,j)};
     end
 end
 
+%Transform the mosaic cell array into a matrix.
 mosaic = cell2mat(mosaic);
 
 end
