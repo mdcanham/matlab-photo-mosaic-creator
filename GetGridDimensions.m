@@ -1,5 +1,5 @@
 function [tilesDown, cellHeight, cellWidth] = GetGridDimensions...
-    (tilesAcross, imgHeight,imgWidth, tileHeight, tileWidth)
+    (tilesAcross, imgHeight, imgWidth, tileHeight, tileWidth)
 %GetGridDimensions Returns all of the data necessary to create a grid.
 %   Inputs:
 %       tilesAcross = The number of tiles that will go across the image.
@@ -12,14 +12,19 @@ function [tilesDown, cellHeight, cellWidth] = GetGridDimensions...
 %       cellHeight = The height of each cell on the grid.
 %       cellWidth = The width of each cell on the grid.
 
-%Calculate the cellWidth and round it down.
-cellWidth = floor(imgWidth/tilesAcross);
+%Calculate the cellWidth.
+cellWidth = imgWidth/tilesAcross;
 
-%Calculate the cellHeight and round it down.
-cellHeight = floor(cellWidth*(tileHeight/tileWidth));
+%Calculate the cellHeight.
+cellHeight = cellWidth*(tileHeight/tileWidth);
 
 %Calculate the number of tiles that will be going downwards.
 tilesDown = floor(imgHeight/cellHeight);
+
+
+%Round down cellWidth and cellHeight
+cellWidth = floor(cellWidth);
+cellHeight = floor(cellHeight);
 
 end
 

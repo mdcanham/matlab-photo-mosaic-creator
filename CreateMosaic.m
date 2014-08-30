@@ -38,11 +38,11 @@ tileAverages = GetTileAverages(tiles);
 % Note that mandrill.png contains a very famous image of a Mandrill (which is
 % a type of monkey).  This image is frequently used as a standard test image 
 % for image processing algorithms within the computer graphics community
-imageName = input('Please enter the filename of an image to create a mosaic for:','s');
+imageName = input('Please enter the filename of an image to create a mosaic for: ','s');
 M = imread(imageName);
 
 % Get the number of tiles to go across the grid
-numberOfTilesAcrossGrid = input('How many tiles do you want across the image?');
+numberOfTilesAcrossGrid = input('How many tiles do you want across the image? ');
 % Construct a grid of images 
 gridImages = GetGrid(M,numberOfTilesAcrossGrid,tileHeight,tileWidth);
 
