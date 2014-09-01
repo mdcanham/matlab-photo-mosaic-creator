@@ -10,18 +10,19 @@ function [mosaic] = AssembleMosaic(index,images)
 
 %Find the number of rows and the number of columns corresponding to the
 %number of tiles in our image.
-[rows, cols] = size(index)
+[rows, cols] = size(index);
+
+%Calculate the height and width of the tiles that we will be using by
+%assesing the fist tile in the images cell array.
+[height, width, colours] = size(images{1});
 
 %Piece together the mosaic by arranging the flower tiles in the correct
-%positions in a cell array.
+%positions in an array.
 for i=1:rows
     for j=1:cols
-        mosaic{i,j} = images{index(i,j)};
+        mosaic((1+(i-1)*height):(i*height),(1+(j-1)*width):(j*width),1:3)...
+            = images{index(i,j)};
     end
 end
-
-%Transform the mosaic cell array into a matrix.
-mosaic = cell2mat(mosaic);
-
 end
 
