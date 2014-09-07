@@ -16,13 +16,18 @@ function [mosaic] = AssembleMosaic(index,images)
 %assesing the fist tile in the images cell array.
 [height, width, colours] = size(images{1});
 
-%Piece together the mosaic by arranging the flower tiles in the correct
-%positions in an array.
+%Transform the mosaic cell array into the final 3D matrix that represents
+%our image.
 for i=1:rows
     for j=1:cols
         mosaic((1+(i-1)*height):(i*height),(1+(j-1)*width):(j*width),1:3)...
             = images{index(i,j)};
     end
 end
+
+%Transform the mosaic cell array into the final 3D matrix that represents
+%our image. Noter this is the "cheat way".
+%mosaic = cell2mat(mosaic);
+
 end
 

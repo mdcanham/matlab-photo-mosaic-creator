@@ -27,9 +27,9 @@ end
 
 %Now calculate the average the amount of red, green and blue across all
 %pixels in the image.
-r = floor(rTotal/(rows*cols));
-g = floor(gTotal/(rows*cols));
-b = floor(bTotal/(rows*cols));
+r = round(rTotal/(rows*cols));
+g = round(gTotal/(rows*cols));
+b = round(bTotal/(rows*cols));
 
 end
 
