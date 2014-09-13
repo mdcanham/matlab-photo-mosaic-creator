@@ -43,6 +43,7 @@ M = imread(imageName);
 
 % Get the number of tiles to go across the grid
 numberOfTilesAcrossGrid = input('How many tiles do you want across the image? ');
+tic
 % Construct a grid of images 
 gridImages = GetGrid(M,numberOfTilesAcrossGrid,tileHeight,tileWidth);
 
@@ -67,4 +68,5 @@ figure(1)
 image(Mosaic);
 axis equal
 set(gca,'Color',get(gcf,'Color')) % set axes color to figure color
+toc
     
