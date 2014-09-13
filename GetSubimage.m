@@ -10,14 +10,8 @@ function [subimage] = GetSubimage(img,rows,cols)
 %       subimage = The RGB image stored in a 3D array that has been
 %       extracted from the larger image
 
-%Initalise the loop that will create the output subimage using the 3 input
-%argumants.
-for i = 1:length(rows)
-    for j = 1:length(cols)
-        subimage(i,j,1) = img(rows(i),cols(j),1);
-        subimage(i,j,2) = img(rows(i),cols(j),2);
-        subimage(i,j,3) = img(rows(i),cols(j),3);
-    end
-end
+%Create the subimage that has been requested from the original image.
+subimage = img(rows,cols,1:3);
+
 end
 

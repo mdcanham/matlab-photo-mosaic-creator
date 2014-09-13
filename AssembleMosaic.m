@@ -10,7 +10,7 @@ function [mosaic] = AssembleMosaic(index,images)
 
 %Find the number of rows and the number of columns corresponding to the
 %number of tiles in our image.
-[rows, cols] = size(index)
+[rows, cols] = size(index);
 
 %Piece together the mosaic by arranging the flower tiles in the correct
 %positions in a cell array. Note: this cell array is not the final 3D array
