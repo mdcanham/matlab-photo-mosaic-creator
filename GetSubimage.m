@@ -11,6 +11,6 @@ function [subimage] = GetSubimage(img,rows,cols)
 %       extracted from the larger image
 
 %Extract the subimage from the original image.
-subimage = img(rows,cols,1:3)
+subimage = img(rows,cols,1:3);
 end
 
