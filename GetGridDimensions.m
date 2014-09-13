@@ -12,19 +12,16 @@ function [tilesDown, cellHeight, cellWidth] = GetGridDimensions...
 %       cellHeight = The height of each cell on the grid.
 %       cellWidth = The width of each cell on the grid.
 
-%Calculate the cellWidth.
-cellWidth = imgWidth/tilesAcross;
+%Calculate the cellWidth then round downwards.
+cellWidth = floor(imgWidth/tilesAcross);
 
-%Calculate the cellHeight.
-cellHeight = cellWidth*(tileHeight/tileWidth);
+%Calculate the cellHeight then round to the nearest whole value. By
+%rounding to the nearest whole value and not downwards we preserve, to a
+%closer degree the proportions of the tiles.
+cellHeight = round(cellWidth*(tileHeight/tileWidth));
 
 %Calculate the number of tiles that will be going downwards.
 tilesDown = floor(imgHeight/cellHeight);
-
-
-%Round down cellWidth and cellHeight
-cellWidth = floor(cellWidth);
-cellHeight = floor(cellHeight);
 
 end
 
