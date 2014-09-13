@@ -1,5 +1,5 @@
 function [array] = GetGridAverages(cells)
-%GetGridAverages Computes the average RGB values for each cell in the cell
+%GetGridAverages Computes the average RGB values for each cell in a cell
 %array.
 %   Input:
 %       cells = A cell array containing our main image split up into cells.
@@ -7,7 +7,9 @@ function [array] = GetGridAverages(cells)
 %       array = A 3 dimensional array that contains the average RGB values
 %       for each of the cells.
 
-%Find out how many rows and how many columns exist within the cell array.
+%Author: MAHNAC
+
+%Calculate how many rows and how many columns exist within the cell array.
 [rows, cols] = size(cells);
 
 %Begin the for loop that will step through the cell array and create a 3

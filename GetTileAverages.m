@@ -1,11 +1,14 @@
 function [avg] = GetTileAverages(tiles)
-%GetTileAverages Find the average amount of red, green and blue for all of
-%the tiles in a list.
+%GetTileAverages will find the average amount of red, green and blue for
+%all of the tiles contained within a 1D cell array.
 %   Input:
 %       tiles: A 1 dimensional cell array containing a list of tiles.
 %   Output:
 %       avg: A 2 dimensional numerical array where each row corresponds to
-%       the average red, green and blue values for a tile.
+%       a different tile and columns 1 through 3 represent the amount of
+%       red green and blue respectively in each tile.
+
+%Author: MAHNAC
 
 %Initiate the loop that will loop through the "tiles" cell array and
 %produce a corresponding output with average red, green and blue values in

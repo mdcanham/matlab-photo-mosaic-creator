@@ -1,5 +1,6 @@
 function [mosaic] = AssembleMosaic(index,images)
-%AssembleMosaic Return the final assembled mosaic as an RGB image.
+%AssembleMosaic will take the index of images and put them
+%together to return the final assembled mosaic as an RGB image.
 %   Input:
 %       index = A 2 dimensional array containing the index of the best
 %       tile to select.
@@ -8,8 +9,10 @@ function [mosaic] = AssembleMosaic(index,images)
 %   Output:
 %       mosaic = The final assembled mosaic as a 3 dimensional RGB image.
 
+%Author: MAHNAC
+
 %Find the number of rows and the number of columns corresponding to the
-%number of tiles in our image.
+%number of tiles in the final image image.
 [rows, cols] = size(index);
 
 %Piece together the mosaic by arranging the flower tiles in the correct

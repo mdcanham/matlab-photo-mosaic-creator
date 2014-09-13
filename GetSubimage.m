@@ -1,5 +1,5 @@
 function [subimage] = GetSubimage(img,rows,cols)
-%GetSubimage Extract a small rectangular image from a larger image.
+%GetSubimage will extract a small rectangular image from a larger image.
 %   Inputs:
 %       img = The large image that the small images will be extracted from.
 %       rows = The 1 dimentional array containing the row numbers that need
@@ -10,7 +10,9 @@ function [subimage] = GetSubimage(img,rows,cols)
 %       subimage = The RGB image stored in a 3D array that has been
 %       extracted from the larger image
 
-%Create the subimage that has been requested from the original image.
+%Author: MAHNAC
+
+%Extract the subimage that has been requested from the original image.
 subimage = img(rows,cols,1:3);
 
 end

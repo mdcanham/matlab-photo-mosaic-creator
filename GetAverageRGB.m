@@ -1,5 +1,6 @@
 function [r g b] = GetAverageRGB(img)
-%GetAverageRGB Find the average amount of red, green and blue in an image.
+%GetAverageRGB will find the average amount of red, green and blue in an
+%image.
 %   Input:
 %       img = A 3D array containing an RGB image.
 %   Output:
@@ -7,10 +8,13 @@ function [r g b] = GetAverageRGB(img)
 %       g = The average amount of green in the image supplied.
 %       b = The average amount of blue in the image supplied.
 
-%Calculate the number of rows, columns and colours in the image supplied.
+%Author: MAHNAC
+
+%Calculate the number of rows, columns and colours in the image supplied to
+%determine how large the image is.
 [rows, cols, colours] = size(img);
 
-%Initialise the counting variables that we will use in the following loop
+%Initialise the counting variables that we will use in the following loop.
 rTotal = 0;
 gTotal = 0;
 bTotal = 0;
