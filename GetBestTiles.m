@@ -1,6 +1,6 @@
 function [tileIndex] = GetBestTiles(gridAverages, tile)
 %GetBestTile will return the best tiles to use to fill the grids that have
-%been created over our image.
+%been created over our original image.
 %   Inputs:
 %       gridAverages = A 3 dimensional array that contains the average RGB
 %       values for each of the cells that have been created over the
@@ -18,7 +18,7 @@ function [tileIndex] = GetBestTiles(gridAverages, tile)
 [rowsGrid, colsGrid, coloursGrid] = size(gridAverages);
 [rowsTile, colsTile, coloursTile] = size(tile);
 
-%Initalise the loop through the rows and columns of the grid.
+%Initialise the loop through the rows and columns of the grid.
 for i=1:rowsGrid
     for j=1:colsGrid
         %Find the red, green and blue values for each of the tiles on

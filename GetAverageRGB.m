@@ -29,7 +29,7 @@ for i=1:rows
     end
 end
 
-%Now calculate the average the amount of red, green and blue across all
+%Calculate the average amount of red, green and blue across all
 %pixels in the image.
 r = round(rTotal/(rows*cols));
 g = round(gTotal/(rows*cols));

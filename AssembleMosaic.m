@@ -12,7 +12,7 @@ function [mosaic] = AssembleMosaic(index,images)
 %Author: MAHNAC
 
 %Find the number of rows and the number of columns corresponding to the
-%number of tiles in the final image image.
+%number of tiles in the final image.
 [rows, cols] = size(index);
 
 %Piece together the mosaic by arranging the flower tiles in the correct
